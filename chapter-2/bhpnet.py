@@ -21,7 +21,7 @@ class NetCat:
             self.send
 
     def listen(self):
-        self.socket.bind(self.args.target, self.args.port)
+        self.socket.bind((self.args.target, self.args.port))
         self.socket.listen(5)
 
         while True:
